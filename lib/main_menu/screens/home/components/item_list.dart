@@ -14,9 +14,6 @@ class ItemList extends StatelessWidget {
       child: Row(
         children: <Widget>[
           ItemCard(
-            svgSrc: "assets/icons/mainbus.svg",
-            title: "Cono Norte",
-            shopName: "Consorcio Empresarial Cono Norte S.A.C",
             press: () {
               Navigator.push(
                 context,
@@ -25,17 +22,20 @@ class ItemList extends StatelessWidget {
                 ),
               );
             },
+            svgSrc: "assets/icons/mainbus.svg",
+            title: "COTUM",
+            shopName: "COTUM Express S.A.C.",
           ),
           ItemCard(
             svgSrc: "assets/icons/mainbus.svg",
-            title: "C",
-            shopName: "C - Grampo",
+            title: "GRAMPO",
+            shopName: "Gran Poder Monterrey C S.A.",
             press: () {},
           ),
           ItemCard(
             svgSrc: "assets/icons/mainbus.svg",
-            title: "Burger & Beer",
-            shopName: "MacDonald's",
+            title: "P",
+            shopName: "AQP Masivo S.A.C.",
             press: () {},
           )
         ],

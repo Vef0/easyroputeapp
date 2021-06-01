@@ -9,7 +9,8 @@ AppBar detailsAppBar() {
         Icons.arrow_back,
         color: Colors.white,
       ),
-      onPressed: () {},
+      onPressed: () {
+      },
     ),
     actions: <Widget>[
       IconButton(

@@ -39,7 +39,7 @@ class TitlePriceRating extends StatelessWidget {
                       onRated: onRatingChanged,
                     ),
                     SizedBox(width: 10),
-                    Text("$numOfReviews reviews"),
+                    Text("$numOfReviews reseñas"),
                   ],
                 ),
               ],

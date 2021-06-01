@@ -34,7 +34,7 @@ class OrderButton extends StatelessWidget {
                 SvgPicture.asset("assets/icons/bag.svg"),
                 SizedBox(width: 10),
                 Text(
-                  "Order Now",
+                  "Agregar a la lista ahora",
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
