@@ -84,7 +84,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 end: Alignment.centerRight,
                 colors: [Color(0xfffbb448), Color(0xfff7892b)])),
         child: Text(
-          'Register Now',
+          'Registrate ahora',
           style: TextStyle(fontSize: 20, color: Colors.white),
         ),
       ),
@@ -110,14 +110,14 @@ class _SignUpPageState extends State<SignUpPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Already have an account ?',
+              'Ya tienes una cuenta ?',
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
             ),
             SizedBox(
               width: 10,
             ),
             Text(
-              'Login',
+              'Ingresa',
               style: TextStyle(
                   color: Color(0xfff79c4f),
                   fontSize: 16,

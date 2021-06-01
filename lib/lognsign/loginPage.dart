@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lastone/lognsign/signup.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:lastone/main_menu/screens/home/home-screen.dart';
 import 'Widget/bezierContainer.dart';
 
 class LoginPage extends StatefulWidget {
@@ -65,10 +65,9 @@ class _LoginPageState extends State<LoginPage> {
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => LoginPage(
-                      title: '',
-                      key: null,
-                    )));
+                builder: (context) => HomeScreen()
+            )
+        );
       },
       child: Container(
         width: MediaQuery.of(context).size.width,
@@ -88,7 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                 end: Alignment.centerRight,
                 colors: [Color(0xfffbb448), Color(0xfff7892b)])),
         child: Text(
-          'Login',
+          'Ingresa',
           style: TextStyle(fontSize: 20, color: Colors.white),
         ),
       ),
@@ -111,7 +110,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
-          Text('or'),
+          Text('o via'),
           Expanded(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 10),
@@ -164,7 +163,7 @@ class _LoginPageState extends State<LoginPage> {
                     topRight: Radius.circular(5)),
               ),
               alignment: Alignment.center,
-              child: Text('Log in with Google',
+              child: Text('Ingresa con tu cuenta de Google',
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,
@@ -212,7 +211,7 @@ class _LoginPageState extends State<LoginPage> {
                     topRight: Radius.circular(5)),
               ),
               alignment: Alignment.center,
-              child: Text('Log in with Facebook',
+              child: Text('Ingresa con tu cuenta de Facebook',
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,
@@ -318,7 +317,7 @@ class _LoginPageState extends State<LoginPage> {
                   Container(
                     padding: EdgeInsets.symmetric(vertical: 10),
                     alignment: Alignment.centerRight,
-                    child: Text('Forgot Password ?',
+                    child: Text('Olvidaste tu contraseña ?',
                         style: TextStyle(
                             fontSize: 14, fontWeight: FontWeight.w500)),
                   ),

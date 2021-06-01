@@ -34,7 +34,7 @@ class _WelcomePageState extends State<WelcomePage> {
             ],
             color: Colors.white),
         child: Text(
-          'Login',
+          'Ingresa',
           style: TextStyle(fontSize: 20, color: Color(0xfff7892b)),
         ),
       ),
@@ -56,7 +56,7 @@ class _WelcomePageState extends State<WelcomePage> {
           border: Border.all(color: Colors.white, width: 2),
         ),
         child: Text(
-          'Register now',
+          'Registrate ahora',
           style: TextStyle(fontSize: 20, color: Colors.white),
         ),
       ),
@@ -69,7 +69,7 @@ class _WelcomePageState extends State<WelcomePage> {
         child: Column(
           children: <Widget>[
             Text(
-              'Quick login with Touch ID',
+              'Ingreso rapido con ID',
               style: TextStyle(color: Colors.white, fontSize: 17),
             ),
             SizedBox(
