@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "582112306751",
+    "project_id": "easyrouteappp",
+    "storage_bucket": "easyrouteappp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:582112306751:android:8124be90ba97012b1aba8a",
+        "android_client_info": {
+          "package_name": "com.example.lastone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "582112306751-1betbvejkgdqu1pru761sukehgg3ouja.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD77PX4Ji1C2IbRgRhAltgFOuie-HNc7ac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "582112306751-1betbvejkgdqu1pru761sukehgg3ouja.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,7 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:lastone/intro/ColorsSys.dart';
 import 'package:flutter/material.dart';
 import 'package:lastone/lognsign//loginPage.dart';
 import 'package:lastone/lognsign/welcomePage.dart';
+import 'package:lastone/main_menu/screens/home/home-screen.dart';
 import 'Strings.dart';
 
 
@@ -90,6 +93,7 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+
   Widget makePage({image, title, content, reverse = false}) {
     return Container(
       padding: EdgeInsets.only(left: 50, right: 50, bottom: 60),

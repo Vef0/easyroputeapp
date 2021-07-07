@@ -23,6 +23,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  # For dashboard pages
   simple_animations: ^1.3.3
   flutter_svg: ^0.22.0
   smooth_star_rating: ^1.1.1
@@ -32,8 +34,25 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   provider: ^5.0.0
-  firebase_core: ^1.2.0
-  firebase_auth: ^1.2.0
+  firebase_core: ^1.3.0
+  firebase_database: ^7.1.1
+  # Add the dependency for the FlutterFire plugin for Google Analytics
+  firebase_analytics: ^5.0.2
+
+  # Add the dependencies for any other Firebase products you want to use in your app
+  # For example, to use Firebase Authentication and Cloud Firestore
+  firebase_auth: ^2.0.0
+  cloud_firestore: ^2.3.0
+
+  # Google sign in
+  google_sign_in: ^5.0.4
+
+  # Font awesome for google logo
+  font_awesome: ^5.10.1
+
+  # Buttons various
+  flutter_signin_button: ^2.0.0
+
 
 dev_dependencies:
   flutter_test:

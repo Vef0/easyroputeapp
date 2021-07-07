@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lastone/lognsign/Widget/bezierContainer.dart';
-import 'package:lastone/lognsign/welcomePage.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
+import 'google_sign_in.dart';
 import 'loginPage.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -15,6 +16,9 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
   Widget _backButton() {
     return InkWell(
       onTap: () {
@@ -36,33 +40,10 @@ class _SignUpPageState extends State<SignUpPage> {
     );
   }
 
-  Widget _entryField(String title, {bool isPassword = false}) {
-    return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Text(
-            title,
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          TextField(
-              obscureText: isPassword,
-              decoration: InputDecoration(
-                  border: InputBorder.none,
-                  fillColor: Color(0xfff3f3f4),
-                  filled: true))
-        ],
-      ),
-    );
-  }
-
   Widget _submitButton() {
     return InkWell(
       onTap: () {
+
         Navigator.push(
             context, MaterialPageRoute( builder: (context) => LoginPage(title: '',)));
       },
@@ -100,7 +81,9 @@ class _SignUpPageState extends State<SignUpPage> {
                 builder: (context) => LoginPage(
                       title: '',
                       key: null,
-                    )));
+                    )
+            )
+        );
       },
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 20),
@@ -110,7 +93,7 @@ class _SignUpPageState extends State<SignUpPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Ya tienes una cuenta ?',
+              '¿Ya tienes una cuenta?',
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
             ),
             SizedBox(
@@ -152,9 +135,74 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget _emailPasswordWidget() {
     return Column(
       children: <Widget>[
-        _entryField("Username"),
-        _entryField("Email"),
-        _entryField("Password", isPassword: true),
+        Container(
+          margin: EdgeInsets.symmetric(vertical: 10),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                "Username",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextField(
+                  controller: emailController,
+                  obscureText: false,
+                  decoration: InputDecoration(
+                      border: InputBorder.none,
+                      fillColor: Color(0xfff3f3f4),
+                      filled: true))
+            ],
+          ),
+        ),
+        Container(
+          margin: EdgeInsets.symmetric(vertical: 10),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                "Email",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextField(
+                  onChanged: (id) {
+
+                  },
+                  obscureText: false,
+                  decoration: InputDecoration(
+                      border: InputBorder.none,
+                      fillColor: Color(0xfff3f3f4),
+                      filled: true))
+            ],
+          ),
+        ),
+        Container(
+          margin: EdgeInsets.symmetric(vertical: 10),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                "Password",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextField(
+                  controller: passwordController,
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      border: InputBorder.none,
+                      fillColor: Color(0xfff3f3f4),
+                      filled: true))
+            ],
+          ),
+        ),
       ],
     );
   }
