@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lastone/main_menu/constants.dart';
+import 'package:lastone/maps/MapScreen.dart';
 
 class OrderButton extends StatelessWidget {
   const OrderButton({
@@ -25,16 +26,20 @@ class OrderButton extends StatelessWidget {
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => MapScreen()),
+            );
+          },
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                SvgPicture.asset("assets/icons/bag.svg"),
                 SizedBox(width: 10),
                 Text(
-                  "Agregar a la lista ahora",
+                  "Ver en el Mapa",
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,

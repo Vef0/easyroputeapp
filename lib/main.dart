@@ -18,14 +18,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => ChangeNotifierProvider(
-    create: (context) => GoogleSignInProvider(),
-    child: MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: title,
-      home: HomePage(),
-    ),
-  );
-
+        create: (context) => GoogleSignInProvider(),
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: title,
+          home: HomePage(),
+        ),
+      );
 }
 
 // sha comand keytool -list -v -keystore "C:\Users\yourusernamehere\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
